@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="container">
+      <div class="col-md-12">
+          <h1>Address Book</h1>
+        </div>
+        <div *ngIf="!contentLoaded" class="col-md-12">
+          <p>Please wait, data is loading ...</p>
+        </div>
+        <div *ngIf="contentLoaded" class="col-md-12">
+          <table class="table">
+            <tr>
+              <th>Image</th>
+              <th>Full Name</th>
+              <th>Actions</th>
+            </tr>
+            <tr *ngFor="let person of personsData; let i = index;">
+              <td>
+                <img src="{{person.picture.thumbnail}}" class="person-prev" width="48px">
+              </td>
+              <td>
+                  <p>{{person.name.title}} <b><a [routerLink]="['/person/'+i]">{{person.name.first}} {{person.name.last}}</a></b></p>
+              </td>
+              <td>
+                <button class="btn btn-danger btn-sm" type="button" (click)="removePerson(i)">Remove</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+  </div>
+</div>

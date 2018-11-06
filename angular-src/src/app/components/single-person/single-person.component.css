@@ -1,0 +1,12 @@
+figure, .button-center {
+    text-align: center; 
+}
+.person-image {
+    border-radius: 50%; 
+    border: 1px solid #000;
+    margin-top: 50px;  
+}
+.section-title {
+    background-color: #cccccc;
+    text-align: center;  
+}

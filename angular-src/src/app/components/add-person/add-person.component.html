@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="container">
+    <div class="col-md-12">
+      <h1>Add Person</h1>
+    </div>
+    <div *ngIf="!showData" class="col-md-12">
+      <p>Internal server error. Please, try again later.</p>
+    </div>
+    <div *ngIf="showData" class="col-md-12">
+      <form>
+        <div class="form-group">
+          <h3>Full name and birthday date</h3>
+        </div>
+        <div class="form-group">
+            <label for="newPersonNameTitle">Title</label>
+            <select [(ngModel)]="newPersonNameTitle" name="newPersonNameTitle" class="form-control">
+              <option value="mr">Mr.</option>
+              <option value="mrs">Mrs.</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        <div class="form-group">
+          <label for="newPersonFirstName">First name</label>
+          <input type="text" [(ngModel)]="newPersonFirstName" name="newPersonFirstName" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="newPersonLastName">Last name</label>
+          <input type="text" [(ngModel)]="newPersonLastName" name="newPersonLastName" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="newPersonBirthday">Date of birthday</label>
+          <input type="date" [(ngModel)]="newPersonBirthday" name="newPersonBirthday" class="form-control" />
+        </div>
+        <div class="form-group">
+          <h3>Phones and Email</h3>
+        </div>
+        <div class="form-group">
+          <label for="newPersonPhone">Phone</label>
+          <input type="text" [(ngModel)]="newPersonPhone" name="newPersonPhone" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="newPersonCell">Cell</label>
+          <input type="text" [(ngModel)]="newPersonCell" name="newPersonCell" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="newPersonEmail">Email</label>
+          <input type="email" [(ngModel)]="newPersonEmail" name="newPersonEmail" class="form-control" />
+        </div>
+        <div class="form-group">
+          <h3>Address</h3>
+        </div>
+        <div class="form-group">
+          <label for="newPersonPostCode">Post code</label>
+          <input type="text" [(ngModel)]="newPersonPostCode" name="newPersonPostCode" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="newPersonState">State</label>
+          <input type="text" [(ngModel)]="newPersonState" name="newPersonState" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="newPersonCity">City</label>
+          <input type="text" [(ngModel)]="newPersonCity" name="newPersonCity" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="newPersonStreet">Street</label>
+          <input type="text" [(ngModel)]="newPersonStreet" name="newPersonStreet" class="form-control" />
+        </div>
+        <div class="form-group">
+          <h3>Image</h3>
+        </div>
+        <div class="form-group">
+            <label for="newPersonImageLg">Large image URL</label>
+            <input type="text" [(ngModel)]="newPersonImageLg" name="newPersonImageLg" class="form-control" />
+          </div>
+        <div class="form-group">
+          <label for="newPersonImageMeddium">Meddium image URL</label>
+          <input type="text" [(ngModel)]="newPersonImageMeddium" name="newPersonImageMeddium" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="newPersonImageSmall">Thumbnail image URL</label>
+          <input type="text" [(ngModel)]="newPersonImageSmall" name="newPersonImageSmall" class="form-control" />
+        </div> 
+        <div class="form-group">
+          <button type="button" class="btn btn-sm btn-primary" (click)="addNewPerson()">Save</button>
+          <button type="button" class="btn btn-sm btn-warning" (click)="skipPerson()">Skip</button>
+        </div>       
+      </form> 
+    </div>
+  </div>
+</div>
+

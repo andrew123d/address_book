@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="row">
+          <div class="col-md-6">
+              <figure>
+                <img src="{{personData.picture.large}}" class="person-image">
+                <figcaption>
+                  <h4>{{personData.name.title}} <em>{{personData.name.first}} {{personData.name.last}}</em></h4>
+                  <p>{{formatedDate}}</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <p class="section-title"><b>Contact information</b></p>
+              <p><b>Phone:</b> {{personData.phone}}</p>
+              <p><b>Cell:</b> {{personData.cell}}</p>
+              <p><b>Email:</b> {{personData.email}}</p>
+              <p class="section-title"><b>Address</b></p>
+              <p ><b>Post code:</b> {{personData.location.postcode}}</p>
+              <p><b>State:</b> {{personData.location.state}}</p>
+              <p><b>City:</b> {{personData.location.city}}</p>
+              <p><b>Street:</b> {{personData.location.street}}</p>
+            </div>
+            <div class="col-md-12 button-center">
+              <p>
+                  <button type="button" class="btn btn-primary btn-lg" (click)="returnToMain()">Return to contacts</button>
+              </p>
+            </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
